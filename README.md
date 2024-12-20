@@ -6,7 +6,7 @@ Efficient route optimization is critical for applications like fleet management 
 
 ## Technologies
 - **Python**
-- **Scikit-learn**: Machine learning library for predictions.
+- **Scikit-learn**: Machine learning library for clustering.
 - **Prophet**: Time-series forecasting for traffic data patterns.
 - **XGBoost**: Gradient boosting for travel time prediction.
 - **OSMnx**: Graph-based geographic analysis.
