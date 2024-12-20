@@ -76,17 +76,16 @@ To evaluate the performance of the model, the following experiment was conducted
   - Each pair had multiple route options to select from.
 
 #### Key Metrics for Comparison:
-1. **Absolute Percentage Time Difference**:
-   \[
-   \frac{\lvert \text{Predicted Fastest Path Time} - \text{Actual Fastest Path Time} \rvert}{\text{Actual Fastest Path Time}}
-   \]
-2. **Absolute Percentage Error in Travel Time**:
-   \[
-   \frac{\lvert \text{Predicted Travel Time} - \text{Actual Travel Time} \rvert}{\text{Actual Travel Time}}
-   \]
-3. **Absolute Time Difference (Seconds)**:
-   - Between predicted and actual fastest path times.
-   - Between predicted and actual inferred travel times.
+1. **Absolute percentage time difference between the predicted path and the actual fastest path**:
+   abs(predicted fastest path travel time-actual fastest path travel time)/actual fastest path travel time
+   
+2. **Absolute percentage error between the predicted travel time and the actual inferred travel time**:
+   abs(predicted travel time-actual travel time)/actual travel time
+3. **Absolute time difference in second between the predicted path and the actual fastest path**:
+   abs(predicted fastest path travel time-actual fastest path travel time)
+
+4. **Absolute time difference in second between the predicted travel time and the actual inferred travel time**:
+   abs(predicted travel time –actual travel time)
 
 ![Route Optimization Results Comparison](images/route_opt_res.png)
 
