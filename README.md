@@ -18,7 +18,7 @@ Efficient route optimization is critical for applications like fleet management 
 
 In route optimization, the challenge lies in using traffic data to calculate the fastest routes between two nodes. For example, given a pair of nodes **A** and **B**, multiple routes may exist, each consisting of several road segments. If real-time traffic information (e.g., travel time) is available for each segment, the shortest route in terms of total travel time can be computed efficiently.
 
-![Route Optimization Problem Description](route_opt_des.png)
+![Route Optimization Problem Description](images/route_opt_des.png)
 
 However, **traffic data is often available at the trip level**, containing information such as:
 - Total trip distance
@@ -88,7 +88,7 @@ To evaluate the performance of the model, the following experiment was conducted
    - Between predicted and actual fastest path times.
    - Between predicted and actual inferred travel times.
 
-![Route Optimization Results Comparison](route_opt_res.png)
+![Route Optimization Results Comparison](images/route_opt_res.png)
 
 ---
 
@@ -97,7 +97,7 @@ The following map demonstrates the optimization process for a selected pair of n
 - **Nodes Displayed**: Start node and end node.
 - **Routes Visualized**: Predicted fastest route and the actual fastest route.
 
-![Route Optimization Results on Map](route_opt_demo.png)
+![Route Optimization Results on Map](images/route_opt_demo.png)
 
 ---
 
