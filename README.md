@@ -1,1 +1,122 @@
-# Route-Optimization-Model
+# Route Optimization Model for Fleet Management
+
+Efficient route optimization is critical for applications like fleet management and logistics, where reducing travel time and fuel consumption can significantly improve operational efficiency. However, leveraging real-time traffic data is challenging due to its complexity and lack of availability at the segment level. This project proposes solutions to bridge this gap.
+
+---
+
+## Technologies
+- **Python**
+- **Scikit-learn**: Machine learning library for predictions.
+- **Prophet**: Time-series forecasting for traffic data patterns.
+- **XGBoost**: Gradient boosting for travel time prediction.
+- **OSMnx**: Graph-based geographic analysis.
+- **NetworkX**: Graph manipulation and shortest-path algorithms.
+
+---
+
+## Problem Description
+
+In route optimization, the challenge lies in using traffic data to calculate the fastest routes between two nodes. For example, given a pair of nodes **A** and **B**, multiple routes may exist, each consisting of several road segments. If real-time traffic information (e.g., travel time) is available for each segment, the shortest route in terms of total travel time can be computed efficiently.
+
+![Route Optimization Problem Description](route_opt_des.png)
+
+However, **traffic data is often available at the trip level**, containing information such as:
+- Total trip distance
+- Trip duration
+- Start and end timestamps
+
+This makes segment-level optimization challenging. To address this, we proposed a two-step solution:
+1. **Convert trip-level traffic data to segment-level traffic information**: By mapping trip data to individual road segments, we enable segment-level travel time prediction and route optimization.
+2. **Cluster road segments with similar properties**: Using clustering techniques, road segments are grouped based on geographical proximity, traffic patterns, and scales. This reduces the complexity of predicting travel time at the individual segment level and addresses issues with incomplete data.
+
+---
+
+## Methodology
+
+1. **Data Preparation**:
+   - Created a segment-level dataset by matching real trips from the original dataset with calculated shortest routes from OSMnx.
+2. **Road Segment Clustering**:
+   - Clustered road segments with strong similarities based on their geographical locations, traffic patterns, and scales.
+3. **Cluster-Level Travel Time Prediction**:
+   - Predicted travel times at the cluster level using historical traffic information.
+4. **Route Optimization**:
+   - Merged cluster-level predicted travel times into the segment-level dataset and conducted route optimization.
+
+---
+
+## Contributions
+
+The main contributions of this work are:
+1. **Trip-to-Segment Conversion**:
+   - Matched real trips from the original dataset with calculated shortest routes from OSMnx:
+     - Matched the endpoints of each real trip with nodes in the OSMnx graph.
+     - Calculated the shortest route using the identified nodes.
+   - Filtered trips based on the matching results:
+     - Retained trips with a strong match between their endpoints and the nearest OSMnx nodes.
+     - Kept trips with a close match between their real trip distances and calculated shortest route lengths.
+   - Distributed trip travel times to road segments using proportional weighting based on the free-flow travel time of each segment.
+   - Extracted road segment details from the OSMnx graph.
+   - Converted trip-level traffic data to segment-level traffic data.
+   
+2. **Cluster-Level Prediction**:
+   - Clustered road segments with similar characteristics (location, travel patterns, and scales) using KMeans.
+   - Performed cluster-level travel time predictions using Prophet and XGBoost.
+   - Merged cluster-level prediction results into the segment-level traffic data for real-time route optimization.
+
+---
+
+## Results
+
+### Comparing Route Optimization with Predicted and Actual Travel Times
+To evaluate the performance of the model, the following experiment was conducted:
+- **Timestamp Selected**: 2024-03-04 08:00:00.
+- **Test Data**: 
+  - 1000 pairs of nodes were randomly generated.
+  - Each trip had a mean duration of approximately 15 minutes.
+  - Each pair had multiple route options to select from.
+
+#### Key Metrics for Comparison:
+1. **Absolute Percentage Time Difference**:
+   \[
+   \frac{\lvert \text{Predicted Fastest Path Time} - \text{Actual Fastest Path Time} \rvert}{\text{Actual Fastest Path Time}}
+   \]
+2. **Absolute Percentage Error in Travel Time**:
+   \[
+   \frac{\lvert \text{Predicted Travel Time} - \text{Actual Travel Time} \rvert}{\text{Actual Travel Time}}
+   \]
+3. **Absolute Time Difference (Seconds)**:
+   - Between predicted and actual fastest path times.
+   - Between predicted and actual inferred travel times.
+
+![Route Optimization Results Comparison](route_opt_res.png)
+
+---
+
+### Visualizing Route Optimization
+The following map demonstrates the optimization process for a selected pair of nodes:
+- **Nodes Displayed**: Start node and end node.
+- **Routes Visualized**: Predicted fastest route and the actual fastest route.
+
+![Route Optimization Results on Map](route_opt_demo.png)
+
+---
+
+## Conclusion
+
+This project demonstrates how trip-level traffic data can be converted to segment-level data to enable real-time route optimization. By clustering road segments and performing cluster-level predictions, the approach balances scalability and accuracy. 
+
+### Key Findings:
+- The model achieved **100% accuracy** in recommending the fastest route for the 1000 test cases.
+- The **average error** in predicting trip duration was approximately **10%**.
+
+### Future Work:
+1. Incorporate dynamic, real-time traffic data feeds for enhanced adaptability.
+2. Explore alternative clustering and prediction methods to further optimize performance.
+3. Extend the approach to larger, more diverse datasets to validate scalability.
+
+---
+
+
+
+
+
