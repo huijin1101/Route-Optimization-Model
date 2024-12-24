@@ -55,7 +55,7 @@ The main contributions of this work are:
 
 ## Results
 
-### Comparing Route Optimization with Predicted and Actual Travel Times
+### Comparing Route Optimization with Predicted and inferred Travel Times
 To evaluate the performance of the model, the following experiment was conducted:
 - **Timestamp Selected**: 2024-03-04 08:00:00.
 - **Test Data**: 
@@ -68,12 +68,12 @@ To evaluate the performance of the model, the following experiment was conducted
    abs(predicted fastest path travel time-actual fastest path travel time)/actual fastest path travel time
    
 2. **Absolute percentage error between the predicted travel time and the actual inferred travel time**:
-   abs(predicted travel time-actual travel time)/actual travel time
+   abs(predicted travel time-inferred travel time)/inferred travel time
 3. **Absolute time difference in second between the predicted path and the actual fastest path**:
    abs(predicted fastest path travel time-actual fastest path travel time)
 
 4. **Absolute time difference in second between the predicted travel time and the actual inferred travel time**:
-   abs(predicted travel time –actual travel time)
+   abs(predicted travel time –actual inferred travel time)
 
 ![Route Optimization Results Comparison](images/route_opt_res.png)
 
