@@ -25,9 +25,9 @@ However, **traffic data is often available at the trip level**, containing infor
 - Trip duration
 - Start and end timestamps
 
-This makes segment-level optimization challenging. To address this, we proposed a two-step solution:
-1. **Convert trip-level traffic data to segment-level traffic information**: By mapping trip data to individual road segments, we enable segment-level travel time prediction and route optimization.
-2. **Cluster road segments with similar properties**: Using clustering techniques, road segments are grouped based on geographical proximity, traffic patterns, and scales. This reduces the complexity of predicting travel time at the individual segment level and addresses issues with incomplete data.
+This makes segment-level optimization challenging. To address this, I proposed a two-step solution:
+1. **Convert trip-level traffic data to segment-level traffic information**: By mapping trip data to individual road segments, I enabled segment-level travel time prediction and route optimization.
+2. **Cluster road segments with similar properties**: Using clustering techniques, road segments were grouped based on geographical proximity, traffic patterns and scales. This reduced the complexity of predicting travel time at the individual segment level and addressed issues with incomplete data.
 
 ---
 
