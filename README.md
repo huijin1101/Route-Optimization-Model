@@ -33,15 +33,7 @@ This makes segment-level optimization challenging. To address this, I proposed a
 
 ## Methodology
 
-1. **Data Preparation**:
-   - Created a segment-level dataset by matching real trips from the original dataset with calculated shortest routes from OSMnx.
-2. **Road Segment Clustering**:
-   - Clustered road segments with strong similarities based on their geographical locations, traffic patterns, and scales.
-3. **Cluster-Level Travel Time Prediction**:
-   - Predicted travel times at the cluster level using historical traffic information.
-4. **Route Optimization**:
-   - Merged cluster-level predicted travel times into the segment-level dataset and conducted route optimization.
-
+![Approach](images/route_opt_metho.png)
 ---
 
 ## Contributions
