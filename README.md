@@ -27,7 +27,7 @@ However, **traffic data is often available at the trip level**, containing infor
 
 This makes segment-level optimization challenging. To address this, I proposed a two-step solution:
 1. **Convert trip-level traffic data to segment-level traffic information**: By mapping trip data to individual road segments, I enabled segment-level travel time prediction and route optimization.
-2. **Cluster road segments with similar properties**: Using clustering techniques, road segments were grouped based on geographical proximity, traffic patterns and scales. This reduced the complexity of predicting travel time at the individual segment level and addressed issues with incomplete data.
+2. **Cluster road segments with similar properties**: Using KMeans, road segments were grouped based on geographical proximity, traffic patterns and scales. This reduced the complexity of predicting travel time at the individual segment level and addressed issues with incomplete data.
 
 ---
 
@@ -47,10 +47,10 @@ The main contributions of this work are:
    - Converted trip-level traffic data to segment-level traffic data.
  ![Approach](images/route_opt_contri1.png)  
 2. **Cluster-Level Prediction**:
-   - Clustered road segments with similar characteristics (location, travel patterns, and scales) using KMeans.
-   - Performed cluster-level travel time predictions using Prophet and XGBoost.
+   - Clustered similar road segments.
+   - Performed cluster-level travel time predictions.
    - Merged cluster-level prediction results into the segment-level traffic data for real-time route optimization.
-
+ ![Approach](images/route_opt_contri2.png) 
 ---
 
 ## Results
