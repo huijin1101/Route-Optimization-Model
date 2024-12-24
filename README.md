@@ -55,7 +55,7 @@ The main contributions of this work are:
 
 ## Results
 
-### Comparing Route Optimization with Predicted and Inferred Travel Times
+### Comparing Route Optimization with Predicted and Inferred Segment-Level Travel Times
 To evaluate the performance of the model, the following experiment was conducted:
 - **Timestamp Selected**: 2024-03-04 08:00:00.
 - **Test Data**: 
