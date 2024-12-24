@@ -97,10 +97,14 @@ This project demonstrates how trip-level traffic data can be converted to segmen
 - The model achieved **100% accuracy** in recommending the fastest route for the 1000 test cases.
 - The **average error** in predicting trip duration was approximately **10%**.
 
-### Future Work:
-1. Incorporate dynamic, real-time traffic data feeds for enhanced adaptability.
-2. Explore alternative clustering and prediction methods to further optimize performance.
-3. Extend the approach to larger, more diverse datasets to validate scalability.
+### Limitations and Future Work:
+#### Limitations:
+1. No real-time traffic data was considered.
+2. Segment-level traffic data was indirectly extracted by inferring from trip-level traffic data.
+#### Future Work:
+1. Incorporate dynamic, real-time traffic data feeds for enhanced accuracy.
+2. Extract segment-level traffic data directly by integrating the OSMnx graph with the existing traffic data sources through a precise geospatial alignment. 
+
 
 ---
 
