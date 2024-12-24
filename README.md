@@ -40,16 +40,12 @@ This makes segment-level optimization challenging. To address this, I proposed a
 
 The main contributions of this work are:
 1. **Trip-to-Segment Conversion**:
-   - Matched real trips from the original dataset with calculated shortest routes from OSMnx:
-     - Matched the endpoints of each real trip with nodes in the OSMnx graph.
-     - Calculated the shortest route using the identified nodes.
-   - Filtered trips based on the matching results:
-     - Retained trips with a strong match between their endpoints and the nearest OSMnx nodes.
-     - Kept trips with a close match between their real trip distances and calculated shortest route lengths.
+   - Matched real trips from the original dataset with calculated shortest routes from OSMnx.
+   - Filtered trips based on the matching results.
    - Distributed trip travel times to road segments using proportional weighting based on the free-flow travel time of each segment.
    - Extracted road segment details from the OSMnx graph.
    - Converted trip-level traffic data to segment-level traffic data.
-   
+ ![Approach](images/route_opt_contri1.png)  
 2. **Cluster-Level Prediction**:
    - Clustered road segments with similar characteristics (location, travel patterns, and scales) using KMeans.
    - Performed cluster-level travel time predictions using Prophet and XGBoost.
