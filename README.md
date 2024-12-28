@@ -46,12 +46,12 @@ The main contributions of this work are:
    - Distributed trip travel times to road segments using proportional weighting based on the free-flow travel time of each segment.
    - Extracted road segment details from the OSMnx graph.
    - Converted trip-level traffic data to segment-level traffic data.
- ![Approach](images/route_opt_contri1.png)  
+ ![Trip-to-Segment Conversion](images/route_opt_contri1.png)  
 2. **Cluster-Level Prediction**:
    - Clustered similar road segments.
    - Performed cluster-level travel time predictions.
    - Merged cluster-level prediction results into the segment-level traffic data for real-time route optimization.
- ![Approach](images/route_opt_contri2.png) 
+<img src='images/route_opt_contri2.png' alt='Cluster-Level Prediction' width='600' height='400'>
 ---
 
 ## Results
@@ -86,8 +86,7 @@ The following map demonstrates the optimization process for a selected pair of n
 - **Nodes Displayed**: Start node and end node.
 - **Routes Visualized**: Predicted fastest route calculated by the predicted segment-level travel time and the actual fastest route calculated by the inferred segment-level travel time.
 
-![Route Optimization Results on Map](images/route_opt_demo.png)
-
+<img src='images/route_opt_demo.png' alt='Route Optimization Results on Map' width='600' height='400'>
 ---
 
 ## Conclusion
