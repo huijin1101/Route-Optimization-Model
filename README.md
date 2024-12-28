@@ -18,7 +18,7 @@ Efficient route optimization is critical for applications like fleet management 
 
 In route optimization, the challenge lies in using traffic data to calculate the optimal route between two nodes. For example, as shown below, given a pair of nodes **A** and **B**, three available routes exist (blue, yellow, and green), each consisting of several road segments (S1 to S9). If real-time traffic information (e.g., travel time) is available for each segment, the shortest route in terms of total travel time can be computed efficiently, which is the yellow route here.
 
-![Route Optimization Problem Description](images/route_opt_des.png)
+<img src="images/route_opt_des.png" alt="Route Optimization Problem Description" width="600" height="300" />
 
 However, **traffic data is often available at the trip level**, containing information such as:
 - Total trip distance
