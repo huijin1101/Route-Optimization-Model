@@ -51,7 +51,7 @@ The main contributions of this work are:
    - Clustered similar road segments.
    - Performed cluster-level travel time predictions.
    - Merged cluster-level prediction results into the segment-level traffic data for real-time route optimization.
-<img src='images/route_opt_contri2.png' alt='Cluster-Level Prediction' width='600' height='200'>
+<img src='images/route_opt_contri2.png' alt='Cluster-Level Prediction' width='600' height='300'>
 ---
 
 ## Results
