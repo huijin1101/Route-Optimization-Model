@@ -33,7 +33,7 @@ This makes segment-level optimization challenging. To address this, I proposed a
 
 ## Methodology
 
-<img src='images/route_opt_metho.png' alt='Approach' width='600' height='400'>
+<img src='images/route_opt_metho.png' alt='Approach' width='600' height='300'>
 
 ---
 
