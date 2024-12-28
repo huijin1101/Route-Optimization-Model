@@ -51,7 +51,7 @@ The main contributions of this work are:
    - Clustered similar road segments.
    - Performed cluster-level travel time predictions.
    - Merged cluster-level prediction results into the segment-level traffic data for real-time route optimization.
-<img src='images/route_opt_contri2.png' alt='Cluster-Level Prediction' width='600' height='400'>
+<img src='images/route_opt_contri2.png' alt='Cluster-Level Prediction' width='600' height='200'>
 ---
 
 ## Results
@@ -86,7 +86,7 @@ The following map demonstrates the optimization process for a selected pair of n
 - **Nodes Displayed**: Start node and end node.
 - **Routes Visualized**: Predicted fastest route calculated by the predicted segment-level travel time and the actual fastest route calculated by the inferred segment-level travel time.
 
-<img src='images/route_opt_demo.png' alt='Route Optimization Results on Map' width='600' height='200'>
+<img src='images/route_opt_demo.png' alt='Route Optimization Results on Map' width='600' height='400'>
 ---
 
 ## Conclusion
