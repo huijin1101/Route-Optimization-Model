@@ -86,7 +86,7 @@ The following map demonstrates the optimization process for a selected pair of n
 - **Nodes Displayed**: Start node and end node.
 - **Routes Visualized**: Predicted fastest route calculated by the predicted segment-level travel time and the actual fastest route calculated by the inferred segment-level travel time.
 
-<img src='images/route_opt_demo.png' alt='Route Optimization Results on Map' width='600' height='400'>
+<img src='images/route_opt_demo.png' alt='Route Optimization Results on Map' width='600' height='200'>
 ---
 
 ## Conclusion
